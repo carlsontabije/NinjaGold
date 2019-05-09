@@ -8,14 +8,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <title>Ninja Gold</title>
 </head>
 <body>
-    <div class="container">
-        <p class="d-inline-block">Your ninja's current gold is: </p>
+    <div class="maingame col-md-8">
+        <div class="boardgame">
+            <div class="col-xs-4">
+                <label class="moves">Number of tries: ></label>
+                <input value="20" class="moves form-control" id="moves" disabled>
+            </div>
+            <div class="col-xs-4">
+                <label class="gold">Current Gold</label>
+                <input value="0" class="gold form-control" id="gold" disabled>
+            </div>
+            <div>
+                <a href="index.html"><button type="reset" class="resetbutton"><span class="glyph glyphicon-repeat" aria-hidden="true">Reset</span></button></a>
+            </div>
+            <div class="ninja">
+                <img src="goldninja.png" alt="my ninja" class="ninja" id="ninja">
+            </div>
+            <div class="buttons">
+                <button type="button" class="cavebutton btn" id="cavebutton" onclick=move_img("cave")>Cave</button>
+                <button type="button" class="housebutton btn" id="housebutton" onclick=move_img("house")>House</button>
+                <button type="button" class="goldmine button btn" id="goldminebutton" onclick=move_img("goldmine")>GoldMine</button>
+                <button type="button" class="casinobutton btn" id="casinobutton" onclick=move_img("casino")>Casino</button>
+            </div>
+            <div id="container">
+                    <img class="cave-loc" src="cave.png" alt="cave" class="avatar" >
+                    <img class="house-loc" src="house.jpg" alt="house" class="avatar" ><br>
+                    <img class="goldmine-loc" src="goldmine.jpg" alt="golmine" class="avatar" >
+                    <img class="casino-loc" src="casino.jpg" alt="casoino" class="avatar" >
+            </div>
+        </div>
+    </div>
+</body>
+</html>   
+
+<!-- <p class="d-inline-block">Your ninja's current gold is: </p>
         <p id="gold" class="d-inline-block">0</p>  
         <span class="d-flex"># of moves: </span>
         <span class="tries d-flex">20</span> 
@@ -42,8 +73,4 @@
         <div class="reset">
                 Click reset button to play again
                 <button type="reset" onclick="myFunction()">Play Again</button>
-        </div>
-
-    </div>
-</body>
-</html>
+        </div> -->
