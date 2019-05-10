@@ -8,69 +8,76 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <title>Ninja Gold</title>
 </head>
 <body>
-    <div class="maingame col-md-8">
-        <div class="boardgame">
+    <div class="maingame col-md-12">
+            <h5>Reach a score of 250 before your moves run out.</h5>
             <div class="col-xs-4">
-                <label class="moves">Number of tries: ></label>
+                <label class="moves">Number of tries </label>
                 <input value="20" class="moves form-control" id="moves" disabled>
             </div>
             <div class="col-xs-4">
                 <label class="gold">Current Gold</label>
-                <input value="0" class="gold form-control" id="gold" disabled>
+                <input value="0" class="gold form-control" id="gold" readonly="">
             </div>
             <div>
                 <a href="index.html"><button type="reset" class="resetbutton"><span class="glyph glyphicon-repeat" aria-hidden="true">Reset</span></button></a>
             </div>
             <div class="ninja">
-                <img src="goldninja.png" alt="my ninja" class="ninja" id="ninja">
+                <img src="goldninja.gif" alt="my ninja" class="ninja" id="ninja">
             </div>
             <div class="buttons">
-                <button type="button" class="cavebutton btn" id="cavebutton" onclick=move_img("cave")>Cave</button>
-                <button type="button" class="housebutton btn" id="housebutton" onclick=move_img("house")>House</button>
-                <button type="button" class="goldmine button btn" id="goldminebutton" onclick=move_img("goldmine")>GoldMine</button>
-                <button type="button" class="casinobutton btn" id="casinobutton" onclick=move_img("casino")>Casino</button>
+                <button type="button" class="cavebutton btn" id="cavebutton" onclick="move_img('cave')">Cave</button>
+                <button type="button" class="housebutton btn d-inline-block" id="housebutton" onclick="move_img('house')">House</button>
+                <button type="button" class="goldminebutton btn" id="goldminebutton" onclick="move_img('goldmine')">GoldMine</button>
+                <button type="button" class="casinobutton btn" id="casinobutton" onclick="move_img('casino')">Casino</button>
             </div>
-            <div id="container">
-                    <img class="cave-loc" src="cave.png" alt="cave" class="avatar" >
-                    <img class="house-loc" src="house.jpg" alt="house" class="avatar" ><br>
-                    <img class="goldmine-loc" src="goldmine.jpg" alt="golmine" class="avatar" >
-                    <img class="casino-loc" src="casino.jpg" alt="casoino" class="avatar" >
+            <!-- <div id="container"> -->
+                <img class="cave-loc" src="cave.jpg" alt="cave" class="avatar" >
+                <img class="house-loc" src="house.jpg" alt="house" class="avatar" ><br>
+                <img class="goldmine-loc" src="goldmine.jpg" alt="goldmine" class="avatar" >
+                <img class="casino-loc" src="casino.jpg" alt="casoino" class="avatar" >
+            <!-- </div> -->
+    <div class="maingame-log d-inline-block">
+        <div class="gamelog">
+            <div class="gamelog-title list-group-item">
+                <h3 class="panel-title"><b>Game Log</b></h3>
+                <div class="total-gains col-xs-4">
+                    <label class="total-gains">Total Gains</label>
+                    <input id="total-gains" class="total-gains form-control" value=0 disabled>
+                </div>
+                <div class="total-losses col-xs-4">
+                    <label class="total-losses">Total Losses</label>
+                    <input id="total-losses" class="total-losses form-control" value=0 readonly>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-</html>   
-
-<!-- <p class="d-inline-block">Your ninja's current gold is: </p>
-        <p id="gold" class="d-inline-block">0</p>  
-        <span class="d-flex"># of moves: </span>
-        <span class="tries d-flex">20</span> 
-        <div class="place">   
-            <h3>Cave</h3>
-            <p>you can gain 5 golds</p>
-                <input type="submit" id="cave" class="find" value="Find gold!">
-    </div>
-        <div class="place">
-            <h3>House</h3>
-            <p>you can gain 10 golds</p>
-                <input type="submit" id="house" class="find" value="Find gold!">
-        </div>
-        <div class="place">
-            <h3>Goldmine</h3>
-            <p>you can gain 1-25 golds</p>
-                <input type="submit"  id="goldmine" class="find" value="Find gold!">
-        </div>
-        <div class="place">
-            <h3>Casino</h3>
-            <p>you can gain or lose 40-50 golds</p>
-                <input type="submit" id="casino" class="find" value="Find gold!">
-        </div>
-        <div class="reset">
-                Click reset button to play again
-                <button type="reset" onclick="myFunction()">Play Again</button>
+        <!-- <div class="gamelog-container" style="
+        margin-left: 25px;
+    ">
+        <div class="gamelog-nav-container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#all">All</a>
+                </li>
+                <li class="nav-item" style="float:left">
+                    <a class="nav-link active" data-toggle="tab" href="#wins">Wins</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#losses">Losses</a>
+                </li>
+                <div class="gamelogtab tab-content">
+                    <div id="all" class="tab-pane "></div>
+                    <div id="wins" class="tab-pane "></div>
+                    <div id="losses" class="tab-pane "></div>
+                </div>
+            </ul>
         </div> -->
+    </div>
+</div>
+</body>
+</html>
