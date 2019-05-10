@@ -1,0 +1,216 @@
+body{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}   
+.maingame{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 1345px;
+    background-color: black;
+    margin-left: 4px;
+    opacity: 0.9;
+}
+.boardgame{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: right;
+    width: 950px;
+    /* height: 500px; */
+}
+button.resetbutton{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: -100px;
+    background-color: #e57024;
+    border-radius: 40px;
+    float: right;
+    margin-right: 10px; 
+}
+.buttons{
+    margin-top: -300px;
+    margin-left: 325px;
+}
+.maingame-log{
+    background-color: black;
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 365px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+.gamelog{
+    margin-top: -300px;
+    margin-bottom: 10px;
+    position: right;
+    width: 330px;
+    height: 100px;
+    background-color: white;
+    margin-left: 30px;
+}
+.gamelog-container{
+    border-color: black;
+    width: 340px;
+    height: 380px;
+    margin-left: -930px;
+    margin-top: 150px;
+}
+.gamelog-title{
+    font-family: century gothic;
+    font-size: 10px;
+}
+.nav{
+    width: auto;
+    background: white;
+}
+h3{
+    text-align: center;
+}
+.cave-loc{
+    width: 270px;
+    height: 170px;
+    border-radius: 10px;
+    margin-left: 350px;
+    margin-top: 20px;
+}
+.house-loc{
+    width: 270px;
+    height: 170px;
+    border-radius: 10px;
+    margin-left: 650px;
+    margin-top: -198px;
+}
+.goldmine-loc{
+    width: 270px;
+    height: 170px;
+    border-radius: 10px;
+    margin-left: 350px;
+    margin-top: 30px;
+}
+.casino-loc{
+    width: 270px;
+    height: 170px;
+    border-radius: 10px;
+    margin-left: 650px;
+    margin-top: -198px;
+}
+label.moves{
+    margin-left: 100px;
+    color:red;
+    margin-top: 5px;
+}
+.container{
+    width: 1350px;
+}
+input.moves{
+    width: 200px;
+    border-radius: 40px;
+    margin-left: 100px;
+    text-align: center;
+}
+label.gold{
+    margin-left: 100px;
+    color: #cc7a00;
+    margin-top: 5px;
+}
+input.gold{
+    width: 200px;
+    border-radius: 40px;
+    margin-left: 100px;
+    text-align: center;
+}
+input.total-gains{
+    width: 100px;
+    border-radius: 40px;
+    margin-left: 10px;
+    text-align: center;
+    border-color: #a6a6a6;
+}
+label.total-gains{
+    margin-left: 30px;
+    color: green;
+    margin-top: 10px;
+}
+div.total-gains{
+    width: 140px;
+    margin-top: 10px;
+}
+input.total-losses{
+    width: 100px;
+    border-radius: 40px;
+    margin-left: 10px;
+    text-align: center;
+    border-color: #a6a6a6;
+}
+label.total-losses{
+    margin-left: 30px;
+    color: red;
+    margin-top: 10px;
+}
+div.total-losses{
+    width: 140px;
+    margin-top: 10px;
+}
+.gamelog-nav-container{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.gamelogtab{
+    margin-top: 10px;
+    /* overflow: auto; */
+    height: 300px;
+}
+.ninja{
+    height: 220px;
+    width: 200px;
+    /* margin-right: 100px;
+    margin-top: 50px;
+     margin-left: -650px; */
+} 
+p.win{
+    text-align: left;
+    float: left;
+    color: #000000;;
+}
+p.lose{
+    text-align: left;
+    float: left;
+    color: #000000;
+}
+p.nogolds{
+    text-align: left;
+    float: left;
+    columns: #000000;
+}
+
+.cavebutton{
+    width: 150px;
+    height: 80px;
+    background-color: gold;
+}
+.housebutton{
+    width: 150px;
+    height: 80px;
+    background-color: gold;
+}
+.goldminebutton{
+    width: 150px;
+    height: 80px;
+    background-color: gold;
+}
+.casinobutton{
+    width: 150px;
+    height: 80px;
+    background-color: gold;
+}
+li a{
+    padding: 50px;
+}
+h5{
+    color: white;
+    text-align: center;
+}
